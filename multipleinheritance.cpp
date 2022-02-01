@@ -11,13 +11,20 @@ class A{
 };
 class B { 
    public:
+    void Afunc(){
+         cout<<"funcB\n";
+     }
     void Bfunc()
     {
         cout<<"funcB\n";
     }
 };
 class C : public A,public B{
-
+  public:
+   void Afunc(){
+         A::Afunc();
+         B::Afunc();
+     }
 
 };
 int main()
