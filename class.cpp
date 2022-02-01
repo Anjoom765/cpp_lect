@@ -22,8 +22,8 @@ public:
   void displayData()
   {
       cout<<"car properties"<<endl<<endl;
-      cout<<"name"<<company_name<<endl;
-      cout<<"model"<<model_name<<endl;
+      cout<<"name of car"<<company_name<<endl;
+      cout<<"model of car"<<model_name<<endl;
       cout<<"fuel type"<<fuel_tye<<endl;
       cout<<"mileage"<<mileage<<endl;
       cout<<"price"<<price<<endl;
