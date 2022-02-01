@@ -4,33 +4,45 @@
 #include<algorithm>
 using namespace std;
 class A{
-    public:
-     void Afunc(){
-         cout<<"funcA\n";
-     }
+    protected:
+     int val;
+    
+     
 };
-class B: public A { 
+class derived1: public A { 
    public:
-    void Bfunc()
+     derived1()
     {
-        cout<<"funcB\n";
+        val=1;
+    }
+    void getvalue()
+    {
+        cout<<"derived 2 is "<<val;
     }
 };
-class C {
+class derived2:public A{
 public:
-  void Cfunc()
+  derived2()
   {
-      cout<<"funcC\n";
+      val=2;
+  }
+   void getvalue()
+  {
+        cout<<"derived 2 is "<<val;
   }
 
 };
-class D:public C,public B{
-
+class derived3:public derived2,public derived1{
+ public:
+   void getvalue()
+   {
+       cout<<"value is ";
+       derived1::getvalue();
+   }
 };
 int main()
 {
-    D d;
-    d.Afunc();
-    d.Bfunc();
-    d.Cfunc();
+    derived3 d3;
+    d3.getvalue();
+
 }

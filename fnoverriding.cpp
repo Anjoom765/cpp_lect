@@ -10,10 +10,10 @@ class Animal{
 };
 class Dog: public Animal{
     public:
-  /*  void makeSound()
+   void makeSound()
     {
         cout<<"dogs barks"<<endl;
-    }*/
+    }
 };
 class Cat: public Animal{
     public:
