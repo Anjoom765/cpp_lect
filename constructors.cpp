@@ -12,7 +12,7 @@ private:
 public:
   //defualt cnstructor
   cars(){
-    cout<<"defualt constructor"<<endl;
+    cout<<"defualt constructor dxf"<<endl;
      
   }
   //parametrized cunstructor
