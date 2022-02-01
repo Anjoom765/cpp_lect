@@ -13,11 +13,11 @@ class complex
           real=r;
           imag=i;
         }
-         complex operator + (complex const &obj)
+         complex operator + (complex c)
            {
                complex res;
-               res.imag= imag + obj.imag;
-               res.real= real + obj.real;
+               res.imag= imag + c.imag;
+               res.real= real + c.real;
                return res;
             }  
         void display()
@@ -27,8 +27,8 @@ class complex
 }; 
 int main()
 {
- complex c1(12,7),c2(5,7);
- complex c3= c1+c2;
- c3.display();
+ complex c1(12,7),c2(5,7),c3(1,2);
+ complex c4= c1+c2+c3;
+ c4.display();
 
 }

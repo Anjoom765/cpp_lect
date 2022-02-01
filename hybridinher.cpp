@@ -9,7 +9,7 @@ class A{
     
      
 };
-class derived1: public A { 
+class derived1: virtual public A { 
    public:
      derived1()
     {
@@ -20,7 +20,7 @@ class derived1: public A {
         cout<<"derived 2 is "<<val;
     }
 };
-class derived2:public A{
+class derived2:virtual public A{
 public:
   derived2()
   {
@@ -37,7 +37,7 @@ class derived3:public derived2,public derived1{
    void getvalue()
    {
        cout<<"value is ";
-       derived1::getvalue();
+       derived2::getvalue();
    }
 };
 int main()
