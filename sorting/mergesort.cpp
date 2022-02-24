@@ -3,7 +3,8 @@ using namespace std;
 void merge(int arr[],int l, int m ,int r)
 {
   int i=l,j=m+1,k=l;
-  int temp[5];
+  int size=r-1+1;
+  int temp[size];
   while(i<=m&&j<=r)
   {
       if(arr[i]<=arr[j])
@@ -51,20 +52,25 @@ void mergeSort(int arr[], int l,int r)
 
     int main()
 {
+  int size;
+  cout<<"enter the size of array"<<endl;
+  cin>>size;
+  cout<<"enter"<<size<<" elements of array"<<endl;
+  int arr[size];
   
-  int arr[5];
-  for (int i = 0; i < 5; i++)
+  
+  for (int i = 0; i < size; i++)
   {
       cin>>arr[i];
   }
   cout<<"before merge sort"<<endl;
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < size; i++)
   {
       cout<<arr[i]<<" "<<endl;
   }
-  mergeSort(arr,0,4);
+  mergeSort(arr,0,size-1);
   cout<<"after merge sort"<<endl;
-  for (int i = 0; i <5; i++)
+  for (int i = 0; i <size; i++)
   {
       cout<<arr[i]<<" ";
   }
